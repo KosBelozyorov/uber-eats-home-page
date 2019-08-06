@@ -1,0 +1,247 @@
+.footer {
+  background-color: $main-dark-color;
+  padding: 56px 8px 40px;
+  position: relative;
+
+  .logo-footer {
+    height: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 40px;
+
+    &::after {
+      display: block;
+      content: "";
+      height: 1px;
+      margin-top: 40px;
+      background-color: $main-light-color;
+      opacity: 0.4;
+    }
+
+    .logo__image {
+      display: block;
+      width: 191px;
+      height: 20px;
+    }
+  }
+
+  &__lang {
+    margin: 0 0 32px;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url(../../images/world.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 10px;
+      left: 17px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 150px;
+      width: 14px;
+      height: 8px;
+      text-align: center;
+      line-height: 38px;
+      color: $main-light-color;
+      background-image: url(../../images/arrow-back.svg);
+      pointer-events: none;
+    }
+  }
+
+  .language__select {
+    background-color: $select-bg-color;
+    color: $main-light-color;
+    padding: 12px 0 12px 48px;
+    width: 173px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    appearance: button;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(73, 161, 68, 0.6);
+    }
+  }
+
+  .socials {
+    margin-bottom: 39px;
+
+    &__title {
+      color: $main-light-color;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.19em;
+      margin: 0 0 16px;
+
+      &::before {
+        display: inline-block;
+        content: "#";
+        font-size: 16px;
+        color: $main-accent-color;
+        margin-right: 1px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      width: 96px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &-item {
+        .item-icon {
+          width: 24px;
+          height: 24px;
+          fill: #fff;
+
+          &:hover {
+            fill: $main-accent-color;
+          }
+        }
+      }
+    }
+  }
+
+  .about-us {
+    &__links {
+      @extend %list;
+
+      .links__item {
+        margin-bottom: 23px;
+
+        .link {
+          @extend %link;
+          @extend %footer-link-hover;
+        }
+      }
+    }
+  }
+
+  .additional-info {
+    &__links {
+      @extend %list;
+
+      .links__item {
+        margin-bottom: 23px;
+
+        .link {
+          @extend %link;
+          @extend %footer-link-hover;
+        }
+      }
+    }
+  }
+
+  .our-apps {
+    margin-bottom: 40px;
+
+    &::before {
+      @extend %border-accent;
+      margin-bottom: 24px;
+    }
+
+    &::after {
+      @extend %border-accent;
+      margin-top: 24px;
+    }
+
+    &__list {
+      @extend %list;
+      display: flex;
+      padding: 0 16px 0 31px;
+      box-sizing: border-box;
+
+      .list__item {
+        display: block;
+        &:first-child {
+          margin-right: 8.2%;
+        }
+        .app {
+          &__icon {
+            display: block;
+            height: 36px;
+
+            &--apple {
+              width: 109px;
+            }
+
+            &--google {
+              width: 124px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    &__list {
+      @extend %list;
+
+      .copyright__list-item {
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+
+        .copy__link {
+          @extend %copy-link;
+          @extend %footer-link-hover;
+        }
+      }
+    }
+  }
+
+  .back-to-top {
+    &__link {
+      display: block;
+      width: 64px;
+      height: 64px;
+      background-color: $btn-up;
+      position: absolute;
+      right: 16px;
+      bottom: 24px;
+      border-radius: 2px;
+      transition: all 0.6s;
+
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 20px;
+
+        .item-icon {
+          align-self: center;
+          width: 16px;
+          height: 25px;
+        }
+      }
+
+      &:hover .item-icon {
+        animation: rotate 0.5s linear;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

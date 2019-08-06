@@ -1,0 +1,65 @@
+.delivery {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 40px;
+
+  .delivery__when {
+    @extend %delivery_when-to;
+    width: 65px;
+    margin-right: 16px;
+  }
+
+  .delivery__to {
+    @extend %delivery_when-to;
+    width: calc(100% - 81px);
+  }
+
+  &__order-btn {
+    @extend %btn-radius;
+    width: 65px;
+    margin-right: 16px;
+    font-size: 13px;
+    line-height: 38px;
+    // text-align: center;
+    position: relative;
+  }
+
+  form {
+    width: calc(100% - 81px);
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 12px;
+      height: 15px;
+      background-image: url(../../images/location.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 13px;
+      left: 11px;
+    }
+
+    .delivery-address {
+      @extend %btn-radius;
+      width: 100%;
+      line-height: 38px;
+      text-indent: 35px;
+
+      &::placeholder {
+        font-size: 13px;
+        line-height: 1.85em;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .main {
+    .delivery {
+      display: none;
+    }
+  }
+}

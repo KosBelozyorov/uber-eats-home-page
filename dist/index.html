@@ -1,13 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+          user-scalable=no,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Uber Eats</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet" />
   </head>
   <body>
-    <img src="./images/logo.svg" alt="Logo">
-    <h1>Hello Mate academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <div class="wrapper">
+      <header class="header" id="top">
+        <div class="logo">
+          <img class="logo__image" src="./images/logo.svg" alt="Uber Eats" />
+        </div>
+        <div class="delivery delivery--header">
+          <div class="delivery__order-btn">
+            <p class="menu-drop__main">ASAP</p>
+            <ul class="menu-drop__list">
+              <li class="menu-drop__item"><a href="#" class="menu-drop__link menu-drop__link-drop">ASAP</a></li>
+              <li class="menu-drop__item"><a href="#" class="menu-drop__link">Set time and date</a></li>
+            </ul>
+          </div>
+          <p class="delivery__to">to</p>
+          <form action="#">
+            <input class="delivery-address" placeholder="ul.Tarasivska St, 16" type="text" name="delivery-address" />
+          </form>
+        </div>
+        <div class="register-controls">
+          <a href="#" class="register-controls__sign-in register-controls__btn">Sign In</a>
+          <a href="#" class="register-controls__register register-controls__btn">Register</a>
+        </div>
+        <div class="basket">
+          <svg class="basket__icon">
+            <use href="./images/sprite.svg#icon-basket"></use>
+          </svg>
+        </div>
+      </header>
+      <main class="main">
+        <div class="search">
+          <form action="#" class="search__form">
+            <input
+              class="search__form-input"
+              type="text"
+              name="userQuery"
+              id="userQuery"
+              autocapitalize="off"
+              autocomplete="off"
+              placeholder="Search for restaurant or cuisine"
+            />
+          </form>
+        </div>
+        <div class="delivery">
+          <p class="delivery__when">When</p>
+          <p class="delivery__to">To</p>
+          <div class="delivery__order-btn">ASAP</div>
+          <form action="#">
+            <input class="delivery-address" placeholder="ul.Tarasivska St, 16" type="text" name="delivery-address" />
+          </form>
+        </div>
+        <section class="search-result">
+          <h1 class="search-result__title">Kyiv Restaurants</h1>
+          <ul class="search-result__list">
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/mcdonalds.png" alt="mcdonalds burgers" title="mcdonalds burgers" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">Макдоналдс</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₽₽ • Бургеры</p>
+                  </div>
+                  <div class="list-item__time">
+                    33-40 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/DimSum.png" alt="DimSum & Co — ЦДМ" title="DimSum & Co — ЦДМ" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">WOKWEI</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴ • Китайська • Азіатська</p>
+                  </div>
+                  <div class="list-item__time">
+                    40-50 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/YIZHA.png" alt="YIZHA" title="YIZHA" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">YIZHA</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Американська • Бургери • Вулична їжа</p>
+                  </div>
+                  <div class="list-item__time">
+                    35-45 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/Musafir.png" alt="Musafir" title="Musafir" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">Musafir (вул. Саксаганського)</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Близькосхідна</p>
+                  </div>
+                  <div class="list-item__time">
+                    30-40 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/WOKWEI-2.png" alt="WOKWEI" title="WOKWEI" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">WOKWEI</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴ • Китайська • Азіатська</p>
+                  </div>
+                  <div class="list-item__time">
+                    40-50 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/Milk-Bar.png" alt="Milk Bar" title="Milk Bar" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">Milk Bar</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Десерти • Європейська</p>
+                  </div>
+                  <div class="list-item__time">
+                    25-35 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/Mimosa.png" alt="Mimosa Brooklyn Pizza" title="Mimosa Brooklyn Pizza" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">Mimosa Brooklyn Pizza</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Італійська • Піца • Американська</p>
+                  </div>
+                  <div class="list-item__time">
+                    15-25 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/To-Be.png" alt="To Be" title="To Be" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">To Be</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Японська • Азіатська • Суші</p>
+                  </div>
+                  <div class="list-item__time">
+                    25-35 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="search-result__list-item">
+              <a href="#" class="item__link">
+                <div class="img-container">
+                  <img src="./images/Druzi.png" alt="Druzi Cafe (вул. Прорізна)" title="Druzi Cafe" class="list-item__image" />
+                </div>
+                <div class="list-item__desc">
+                  <h2 class="list-item__title">Druzi Cafe (вул. Прорізна)</h2>
+                  <div class="list-item__price-food">
+                    <p class="list-item__food">₴₴ • Американська • Сучасна європейська • У...</p>
+                  </div>
+                  <div class="list-item__time">
+                    30-40 Min
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="logo logo-footer">
+          <img class="logo__image" src="./images/white-logo.svg" alt="Uber Eats" title="Uber Eats" />
+        </div>
+        <div class="footer__content">
+          <div class="lang-socials__container">
+            <div class="footer__lang">
+              <select class="language__select" name="language__select" id="language__select">
+                <option class="option" value="">english</option>
+                <option value="">ukrainian</option>
+              </select>
+            </div>
+            <section class="socials">
+              <h2 class="socials__title">UberEats</h2>
+              <ul class="socials__list">
+                <li class="socials__list-item">
+                  <a href="#" class="item-link">
+                    <p class="visually-hidden">Facebook</p>
+                    <div class="icon-container">
+                      <svg class="item-icon">
+                        <use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li class="socials__list-item">
+                  <a href="#" class="item-link">
+                    <p class="visually-hidden">Twitter</p>
+                    <div class="icon-container">
+                      <svg class="item-icon">
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li class="socials__list-item">
+                  <a href="#" class="item-link">
+                    <p class="visually-hidden">Instagram</p>
+                    <div class="icon-container">
+                      <svg class="item-icon">
+                        <use href="./images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <section class="about-us">
+            <h2 class="visually-hidden">about us</h2>
+            <ul class="about-us__links">
+              <li class="links__item"><a href="#" class="link">About UberEats</a></li>
+              <li class="links__item"><a href="#" class="link">Become a Delivery Partner</a></li>
+              <li class="links__item"><a href="#" class="link">Become a Restaurant Partner</a></li>
+            </ul>
+          </section>
+          <section class="additional-info">
+            <h2 class="visually-hidden">additional info</h2>
+            <ul class="additional-info__links">
+              <li class="links__item"><a href="#" class="link">See all cities</a></li>
+              <li class="links__item"><a href="#" class="link">Pricing</a></li>
+              <li class="links__item"><a href="#" class="link">Help</a></li>
+              <li class="links__item"><a href="#" class="link">FAQs</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="our-apps">
+          <ul class="our-apps__list">
+            <li class="list__item">
+              <a href="#" class="app">
+                <img src="./images/App_Store.png" alt="App Store" class="app__icon app__icon--apple">
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="app app--google">
+                <img src="./images/google-play.png" alt="Google Play" class="app__icon app__icon--google">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul class="copyright__list">
+            <li class="copyright__list-item"><a class="copy__link" href="#">© 2017 Uber Technologies Inc.</a></li>
+            <li class="copyright__list-item"><a class="copy__link" href="#">Privacy</a></li>
+            <li class="copyright__list-item"><a class="copy__link" href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top__link">
+            <p class="visually-hidden">back to top</p>
+            <div class="icon-container">
+              <svg class="item-icon">
+                <use href="./images/sprite.svg#icon-arrow"></use>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

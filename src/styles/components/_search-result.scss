@@ -1,0 +1,64 @@
+.search-result {
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
+    grid-gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      @media (max-width: 639px) {
+        &:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+
+      .item__link {
+        text-decoration: none;
+      }
+
+      .img-container {
+        margin-bottom: 14px;
+      }
+
+      .list-item__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .list-item__desc {
+        padding-bottom: 20px;
+        .list-item__title {
+          margin-bottom: 4px;
+        }
+
+        .list-item__price-food {
+          .list-item__food {
+            @extend %no-margin;
+            color: $placeholder-color;
+            font-size: 14px;
+            line-height: 1.5em;
+            margin-bottom: 4px;
+          }
+        }
+
+        .list-item__time {
+          color: $main-text-color;
+          font-size: 13px;
+          line-height: 1.62em;
+        }
+      }
+    }
+  }
+}
