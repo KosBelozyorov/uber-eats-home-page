@@ -1,6 +1,5 @@
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1123px) {
   .header {
-    justify-content: unset;
     padding: 16px 8px;
 
     .logo {
@@ -43,10 +42,15 @@
       }
 
       &__list {
-        grid-template-columns: minmax(304px, 368px) minmax(304px, 368px);
+        grid-template-columns: minmax(296px, 1fr) minmax(296px, 1fr);
+
+        &-item {
+          min-width: 296px;
+        }
       }
 
       .img-container {
+        min-width: 296px;
         margin-bottom: 16px;
       }
 
@@ -127,6 +131,20 @@
 
         &:hover {
           background-color: $main-accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) and (max-width: 730px) {
+  .header {
+    .delivery--header {
+      margin: 0;
+
+      form {
+        .delivery-address {
+          width: 155px;
         }
       }
     }

@@ -1,6 +1,5 @@
-@media (min-width: 1024px) {
+@media (min-width: 1124px) {
   .header {
-    justify-content: unset;
     padding: 16px 7.7% 16px 7.2%;
 
     .logo {
@@ -69,13 +68,11 @@
       }
 
       &__list {
-        grid-template-columns: repeat(auto-fill, 308px);
-        // grid-template-columns: minmax(285px, 285px) minmax(285px, 285px);
-        // grid-template-columns: repeat(auto-fill, minmax(250px, 279px));
+        grid-template-columns: 1fr 1fr 1fr;
         padding-bottom: 60px;
 
         &-item {
-          // max-width: 308px;
+          min-width: 308px;
         }
 
         .list-item__food {
