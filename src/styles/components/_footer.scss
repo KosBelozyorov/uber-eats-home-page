@@ -33,7 +33,7 @@
       content: "";
       width: 16px;
       height: 16px;
-      background-image: url(../../images/world.svg);
+      background-image: url(./images/world.svg);
       background-position: center;
       background-repeat: no-repeat;
       position: absolute;
@@ -51,7 +51,7 @@
       text-align: center;
       line-height: 38px;
       color: $main-light-color;
-      background-image: url(../../images/arrow-back.svg);
+      background-image: url(./images/arrow-back.svg);
       pointer-events: none;
     }
   }
