@@ -12,6 +12,7 @@
     padding: 0;
 
     &-item {
+      background-color: rgba(117, 117, 117, 0.04);
       @media (max-width: 639px) {
         &:nth-last-child(-n + 5) {
           display: none;
