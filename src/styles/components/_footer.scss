@@ -216,6 +216,7 @@
       bottom: 24px;
       border-radius: 2px;
       transition: all 0.6s;
+      scroll-behavior: smooth;
 
       .icon-container {
         display: flex;
