@@ -74,6 +74,9 @@ input[type="radio"].visually-hidden {
   line-height: 1.55em;
   margin: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0; }
@@ -106,9 +109,7 @@ body {
     -ms-flex-item-align: center;
         align-self: center; }
     .header .logo__image {
-      display: block;
-      width: 100%;
-      height: auto; }
+      display: block; }
   .header .delivery--header {
     display: none;
     -webkit-box-orient: horizontal;
@@ -218,21 +219,16 @@ body {
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url(../../images/search.svg);
+    background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/search.svg);
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    top: 4px; }
-  .search::after {
-    display: block;
-    content: "";
-    height: 1px;
-    background-color: #757575;
-    opacity: 0.3;
-    margin-top: 15px; }
+    top: 15px; }
   .search__form-input {
     width: 100%;
+    height: 48px;
     border: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.3);
     padding: 0;
     font-size: 13px;
     line-height: 24px;
@@ -283,7 +279,7 @@ body {
       content: "";
       width: 12px;
       height: 15px;
-      background-image: url(../../images/location.svg);
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/location.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -319,38 +315,45 @@ body {
 
 .search-result__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 16px;
   list-style: none;
   margin: 0;
   padding: 0; }
-  @media (max-width: 639px) {
-    .search-result__list-item:nth-last-child(-n + 5) {
-      display: none; } }
-  .search-result__list-item .item__link {
-    text-decoration: none; }
-  .search-result__list-item .img-container {
-    margin-bottom: 14px; }
-  .search-result__list-item .list-item__image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto; }
-    .search-result__list-item .list-item__image:hover {
-      opacity: 0.8; }
-  .search-result__list-item .list-item__desc {
-    padding-bottom: 20px; }
-    .search-result__list-item .list-item__desc .list-item__title {
-      margin-bottom: 4px; }
-    .search-result__list-item .list-item__desc .list-item__price-food .list-item__food {
-      color: #626262;
-      font-size: 14px;
-      line-height: 1.5em;
-      margin-bottom: 4px; }
-    .search-result__list-item .list-item__desc .list-item__time {
-      color: #1d1d1d;
-      font-size: 13px;
-      line-height: 1.62em; }
+  .search-result__list-item {
+    background-color: rgba(117, 117, 117, 0.04); }
+    @media (max-width: 639px) {
+      .search-result__list-item:nth-last-child(-n + 5) {
+        display: none; } }
+    .search-result__list-item:hover {
+      -webkit-box-shadow: inset 0 0 0 1px #d5d5d5, 0 0 6px 0 #d5d5d5;
+              box-shadow: inset 0 0 0 1px #d5d5d5, 0 0 6px 0 #d5d5d5; }
+    .search-result__list-item .item__link {
+      text-decoration: none; }
+    .search-result__list-item .img-container {
+      min-width: 308px;
+      margin: 0 auto;
+      margin-bottom: 14px; }
+    .search-result__list-item .list-item__image {
+      display: block;
+      width: 100%;
+      height: auto; }
+      .search-result__list-item .list-item__image:hover {
+        opacity: 0.8; }
+    .search-result__list-item .list-item__desc {
+      padding-left: 10px;
+      padding-bottom: 20px; }
+      .search-result__list-item .list-item__desc .list-item__title {
+        margin-bottom: 4px; }
+      .search-result__list-item .list-item__desc .list-item__price-food .list-item__food {
+        color: #626262;
+        font-size: 14px;
+        line-height: 1.5em;
+        margin-bottom: 4px; }
+      .search-result__list-item .list-item__desc .list-item__time {
+        color: #1d1d1d;
+        font-size: 13px;
+        line-height: 1.62em; }
 
 .footer {
   background-color: #262626;
@@ -379,7 +382,7 @@ body {
       content: "";
       width: 16px;
       height: 16px;
-      background-image: url(../../images/world.svg);
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/world.svg);
       background-position: center;
       background-repeat: no-repeat;
       position: absolute;
@@ -395,7 +398,7 @@ body {
       text-align: center;
       line-height: 38px;
       color: #fff;
-      background-image: url(../../images/arrow-back.svg);
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/arrow-back.svg);
       pointer-events: none; }
   .footer .language__select {
     background-color: #3b3b3b;
@@ -521,11 +524,8 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1123px) {
   .header {
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
     padding: 16px 8px; }
     .header .logo {
       margin-right: 3%; }
@@ -552,8 +552,11 @@ body {
       .main .search-result__title {
         margin-bottom: 16px; }
       .main .search-result__list {
-        grid-template-columns: minmax(304px, 368px) minmax(304px, 368px); }
+        grid-template-columns: minmax(296px, 1fr) minmax(296px, 1fr); }
+        .main .search-result__list-item {
+          min-width: 296px; }
       .main .search-result .img-container {
+        min-width: 296px;
         margin-bottom: 16px; }
       .main .search-result .list-item__food {
         letter-spacing: -0.2px; }
@@ -592,11 +595,14 @@ body {
     .footer .back-to-top__link:hover {
       background-color: #49a144; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) and (max-width: 730px) {
+  .header .delivery--header {
+    margin: 0; }
+    .header .delivery--header form .delivery-address {
+      width: 155px; } }
+
+@media (min-width: 1124px) {
   .header {
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
     padding: 16px 7.7% 16px 7.2%; }
     .header .logo {
       width: 119px;
@@ -631,15 +637,17 @@ body {
       .main .search::before {
         width: 22px;
         height: 22px;
-        top: 0; }
+        top: 15px; }
       .main .search__form-input {
         font-size: 16px;
         line-height: 1.5em; }
     .main .search-result__title {
       margin-bottom: 16px; }
     .main .search-result__list {
-      grid-template-columns: repeat(auto-fill, 308px);
+      grid-template-columns: 1fr 1fr 1fr;
       padding-bottom: 60px; }
+      .main .search-result__list-item {
+        min-width: 308px; }
       .main .search-result__list .list-item__food {
         letter-spacing: -0.1px; }
   .footer {
