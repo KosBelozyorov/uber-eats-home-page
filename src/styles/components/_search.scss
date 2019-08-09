@@ -27,6 +27,7 @@
 
       &:focus {
         outline-color: transparent;
+        border-bottom-color: $main-accent-color;
       }
 
       &::placeholder {
