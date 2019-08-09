@@ -1,0 +1,152 @@
+@media (min-width: 640px) and (max-width: 1123px) {
+  .header {
+    padding: 16px 8px;
+
+    .logo {
+      margin-right: 3%;
+    }
+
+    .delivery--header {
+      display: flex;
+    }
+
+    .register-controls {
+      &__btn {
+        display: block;
+        width: 80px;
+        font-size: 13px;
+
+        &:first-child {
+          margin-right: 10%;
+        }
+      }
+    }
+
+    .basket {
+      display: flex;
+    }
+  }
+
+  .main {
+    padding: 0 8px;
+
+    .search {
+      margin-bottom: 56px;
+    }
+
+    .search-result {
+      padding-bottom: 32px;
+
+      &__title {
+        margin-bottom: 16px;
+      }
+
+      &__list {
+        grid-template-columns: minmax(296px, 1fr) minmax(296px, 1fr);
+
+        &-item {
+          min-width: 296px;
+        }
+      }
+
+      .img-container {
+        min-width: 296px;
+        margin-bottom: 16px;
+      }
+
+      .list-item__food {
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+
+  .footer {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-bottom: 25px;
+
+      .language__select {
+        width: 176px;
+      }
+    }
+
+    .our-apps {
+      &::before {
+        margin-bottom: 40px;
+      }
+
+      &:after {
+        margin-top: 40px;
+      }
+
+      .our-apps__list {
+        padding-right: 30.5%;
+        padding-left: 32.4%;
+
+        .list__item {
+          &:first-child {
+            margin-right: 40px;
+          }
+
+          .app {
+            &__icon {
+              display: block;
+              height: 40px;
+
+              &--apple {
+                width: 121px;
+              }
+
+              &--google {
+                width: 135px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copyright {
+      &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .copyright__list-item {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .back-to-top {
+      &__link {
+        width: 80px;
+        height: 80px;
+
+        .icon-container {
+          padding-top: 25px;
+        }
+
+        &:hover {
+          background-color: $main-accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) and (max-width: 730px) {
+  .header {
+    .delivery--header {
+      margin: 0;
+
+      form {
+        .delivery-address {
+          width: 155px;
+        }
+      }
+    }
+  }
+}

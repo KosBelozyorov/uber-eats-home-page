@@ -1,14 +1,692 @@
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+/*test*/
+.header .register-controls__btn, .header .basket, .delivery__order-btn, .delivery form .delivery-address {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+.header .delivery--header .delivery__order-btn .menu-drop__list, .footer .about-us__links, .footer .additional-info__links, .footer .our-apps__list, .footer .copyright__list, .search-result__list-item .list-item__desc .list-item__price-food .list-item__food {
+  margin: 0; }
+
+.delivery .delivery__when, .delivery .delivery__to {
+  color: #626262;
+  font-size: 11px;
+  line-height: 1.18em;
+  margin: 0;
+  margin-bottom: 8px; }
+
+.header .delivery--header .delivery__order-btn .menu-drop__list, .footer .about-us__links, .footer .additional-info__links, .footer .our-apps__list, .footer .copyright__list {
+  list-style: none;
+  padding: 0; }
+
+.footer .about-us__links .links__item .link, .footer .additional-info__links .links__item .link {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15em;
+  text-decoration: none; }
+
+.footer .copyright__list .copyright__list-item .copy__link {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.18em;
+  text-decoration: none; }
+
+.footer .our-apps::before, .footer .our-apps::after {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.4; }
+
+.header .delivery--header .delivery__order-btn .menu-drop__link:hover, .footer .about-us__links .links__item .link:hover, .footer .additional-info__links .links__item .link:hover, .footer .copyright__list .copyright__list-item .copy__link:hover {
+  color: #49a144;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s; }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.search-result__title {
+  color: #1d1d1d;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.55em;
+  margin: 0; }
+
+.list-item__title {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55em;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
-  background: #eee; }
+  font-family: Roboto, sans-serif;
+  margin: 0; }
+
+.wrapper {
+  min-width: 320px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.main {
+  padding: 0 4px 0 8px; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  padding: 16px 4px 16px 8px;
+  -webkit-box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+          box-shadow: 0 0 16px rgba(38, 38, 38, 0.16); }
+  .header .logo {
+    width: 105px;
+    height: 11px;
+    -ms-flex-item-align: center;
+        align-self: center; }
+    .header .logo__image {
+      display: block; }
+  .header .delivery--header {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    margin-right: 11.5%; }
+    .header .delivery--header .delivery__order-btn {
+      width: 57px;
+      margin: 0;
+      padding: 0 12px;
+      position: relative;
+      z-index: 3; }
+      .header .delivery--header .delivery__order-btn p {
+        margin: 0; }
+      .header .delivery--header .delivery__order-btn .menu-drop__list {
+        display: none;
+        width: 200px;
+        position: absolute;
+        top: 39px;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px; }
+      .header .delivery--header .delivery__order-btn .menu-drop__link {
+        padding-left: 12px;
+        text-decoration: none;
+        color: #262626; }
+      .header .delivery--header .delivery__order-btn:hover .menu-drop__list {
+        display: block; }
+    .header .delivery--header .delivery__to {
+      width: 12px;
+      margin: 0 10px; }
+    .header .delivery--header form {
+      width: 100%; }
+    .header .delivery--header .delivery-address {
+      width: 215px; }
+      .header .delivery--header .delivery-address:focus {
+        outline-color: #49a144; }
+  .header .register-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .header .register-controls__btn {
+      display: block;
+      width: 72px;
+      -ms-flex-item-align: center;
+          align-self: center;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 38px;
+      text-decoration: none; }
+      .header .register-controls__btn:first-child {
+        margin-right: 12px; }
+    .header .register-controls__register {
+      background-color: #262626;
+      border-color: #262626;
+      color: #fff;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .header .register-controls__register:hover {
+        background-color: #fff;
+        border-color: #e0e0e0;
+        color: #1d1d1d; }
+    .header .register-controls__sign-in {
+      color: #1d1d1d;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .header .register-controls__sign-in:hover {
+        background-color: #262626;
+        border-color: #262626;
+        color: #fff; }
+  .header .basket {
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 2%;
+    border-color: transparent;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+    .header .basket:hover {
+      border-color: #e0e0e0; }
+    .header .basket__icon {
+      justify-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+      width: 19px;
+      height: 23px;
+      -webkit-transition: all 0.6s;
+      transition: all 0.6s; }
+    .header .basket:hover .basket__icon {
+      fill: #49a144; }
+
+.search {
+  margin-bottom: 24px;
+  position: relative; }
+  .search::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px; }
+  .search__form-input {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+    padding: 0;
+    font-size: 13px;
+    line-height: 24px;
+    text-indent: 24px; }
+    .search__form-input:focus {
+      outline-color: transparent; }
+    .search__form-input::-webkit-input-placeholder {
+      color: #626262;
+      opacity: 0.5; }
+    .search__form-input::-moz-placeholder {
+      color: #626262;
+      opacity: 0.5; }
+    .search__form-input:-ms-input-placeholder {
+      color: #626262;
+      opacity: 0.5; }
+    .search__form-input::-ms-input-placeholder {
+      color: #626262;
+      opacity: 0.5; }
+    .search__form-input::placeholder {
+      color: #626262;
+      opacity: 0.5; }
+
+.delivery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-bottom: 40px; }
+  .delivery .delivery__when {
+    width: 65px;
+    margin-right: 16px; }
+  .delivery .delivery__to {
+    width: calc(100% - 81px); }
+  .delivery__order-btn {
+    width: 65px;
+    margin-right: 16px;
+    font-size: 13px;
+    line-height: 38px;
+    position: relative; }
+  .delivery form {
+    width: calc(100% - 81px);
+    position: relative; }
+    .delivery form::before {
+      display: block;
+      content: "";
+      width: 12px;
+      height: 15px;
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/location.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 13px;
+      left: 11px; }
+    .delivery form .delivery-address {
+      width: 100%;
+      line-height: 38px;
+      text-indent: 35px; }
+      .delivery form .delivery-address::-webkit-input-placeholder {
+        font-size: 13px;
+        line-height: 1.85em; }
+      .delivery form .delivery-address::-moz-placeholder {
+        font-size: 13px;
+        line-height: 1.85em; }
+      .delivery form .delivery-address:-ms-input-placeholder {
+        font-size: 13px;
+        line-height: 1.85em; }
+      .delivery form .delivery-address::-ms-input-placeholder {
+        font-size: 13px;
+        line-height: 1.85em; }
+      .delivery form .delivery-address::placeholder {
+        font-size: 13px;
+        line-height: 1.85em; }
+
+@media (min-width: 640px) {
+  .main .delivery {
+    display: none; } }
+
+.search-result__title {
+  margin-bottom: 14px; }
+
+.search-result__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .search-result__list-item {
+    background-color: rgba(117, 117, 117, 0.04); }
+    @media (max-width: 639px) {
+      .search-result__list-item:nth-last-child(-n + 5) {
+        display: none; } }
+    .search-result__list-item:hover {
+      -webkit-box-shadow: inset 0 0 0 1px #d5d5d5, 0 0 6px 0 #d5d5d5;
+              box-shadow: inset 0 0 0 1px #d5d5d5, 0 0 6px 0 #d5d5d5; }
+    .search-result__list-item .item__link {
+      text-decoration: none; }
+    .search-result__list-item .img-container {
+      min-width: 308px;
+      margin: 0 auto;
+      margin-bottom: 14px; }
+    .search-result__list-item .list-item__image {
+      display: block;
+      width: 100%;
+      height: auto; }
+      .search-result__list-item .list-item__image:hover {
+        opacity: 0.8; }
+    .search-result__list-item .list-item__desc {
+      padding-left: 10px;
+      padding-bottom: 20px; }
+      .search-result__list-item .list-item__desc .list-item__title {
+        margin-bottom: 4px; }
+      .search-result__list-item .list-item__desc .list-item__price-food .list-item__food {
+        color: #626262;
+        font-size: 14px;
+        line-height: 1.5em;
+        margin-bottom: 4px; }
+      .search-result__list-item .list-item__desc .list-item__time {
+        color: #1d1d1d;
+        font-size: 13px;
+        line-height: 1.62em; }
+
+.footer {
+  background-color: #262626;
+  padding: 56px 8px 40px;
+  position: relative; }
+  .footer .logo-footer {
+    height: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 40px; }
+    .footer .logo-footer::after {
+      display: block;
+      content: "";
+      height: 1px;
+      margin-top: 40px;
+      background-color: #fff;
+      opacity: 0.4; }
+    .footer .logo-footer .logo__image {
+      display: block;
+      width: 191px;
+      height: 20px; }
+  .footer__lang {
+    margin: 0 0 32px;
+    position: relative; }
+    .footer__lang::before {
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/world.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 10px;
+      left: 17px; }
+    .footer__lang::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 150px;
+      width: 14px;
+      height: 8px;
+      text-align: center;
+      line-height: 38px;
+      color: #fff;
+      background-image: url(https://kosbelozyorov.github.io/uber-eats-home-page/images/arrow-back.svg);
+      pointer-events: none; }
+  .footer .language__select {
+    background-color: #3b3b3b;
+    color: #fff;
+    padding: 12px 0 12px 48px;
+    width: 173px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    -webkit-appearance: button;
+       -moz-appearance: button;
+            appearance: button;
+    outline: none;
+    cursor: pointer; }
+    .footer .language__select:hover {
+      background-color: rgba(73, 161, 68, 0.6); }
+  .footer .socials {
+    margin-bottom: 39px; }
+    .footer .socials__title {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.19em;
+      margin: 0 0 16px; }
+      .footer .socials__title::before {
+        display: inline-block;
+        content: "#";
+        font-size: 16px;
+        color: #49a144;
+        margin-right: 1px; }
+    .footer .socials__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 96px;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .footer .socials__list-item .item-icon {
+        width: 24px;
+        height: 24px;
+        fill: #fff; }
+        .footer .socials__list-item .item-icon:hover {
+          fill: #49a144; }
+  .footer .about-us__links .links__item {
+    margin-bottom: 23px; }
+  .footer .additional-info__links .links__item {
+    margin-bottom: 23px; }
+  .footer .our-apps {
+    margin-bottom: 40px; }
+    .footer .our-apps::before {
+      margin-bottom: 24px; }
+    .footer .our-apps::after {
+      margin-top: 24px; }
+    .footer .our-apps__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 16px 0 31px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      .footer .our-apps__list .list__item {
+        display: block; }
+        .footer .our-apps__list .list__item:first-child {
+          margin-right: 8.2%; }
+        .footer .our-apps__list .list__item .app__icon {
+          display: block;
+          height: 36px; }
+          .footer .our-apps__list .list__item .app__icon--apple {
+            width: 109px; }
+          .footer .our-apps__list .list__item .app__icon--google {
+            width: 124px; }
+  .footer .copyright__list .copyright__list-item:not(:last-child) {
+    margin-bottom: 24px; }
+  .footer .back-to-top__link {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-color: #59bd5a;
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+    border-radius: 2px;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+    .footer .back-to-top__link .icon-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      padding-top: 20px; }
+      .footer .back-to-top__link .icon-container .item-icon {
+        -ms-flex-item-align: center;
+            align-self: center;
+        width: 16px;
+        height: 25px; }
+    .footer .back-to-top__link:hover .item-icon {
+      -webkit-animation: rotate 0.5s linear;
+              animation: rotate 0.5s linear; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@media (min-width: 640px) and (max-width: 1123px) {
+  .header {
+    padding: 16px 8px; }
+    .header .logo {
+      margin-right: 3%; }
+    .header .delivery--header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .header .register-controls__btn {
+      display: block;
+      width: 80px;
+      font-size: 13px; }
+      .header .register-controls__btn:first-child {
+        margin-right: 10%; }
+    .header .basket {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .main {
+    padding: 0 8px; }
+    .main .search {
+      margin-bottom: 56px; }
+    .main .search-result {
+      padding-bottom: 32px; }
+      .main .search-result__title {
+        margin-bottom: 16px; }
+      .main .search-result__list {
+        grid-template-columns: minmax(296px, 1fr) minmax(296px, 1fr); }
+        .main .search-result__list-item {
+          min-width: 296px; }
+      .main .search-result .img-container {
+        min-width: 296px;
+        margin-bottom: 16px; }
+      .main .search-result .list-item__food {
+        letter-spacing: -0.2px; }
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 25px; }
+    .footer__content .language__select {
+      width: 176px; }
+  .footer .our-apps::before {
+    margin-bottom: 40px; }
+  .footer .our-apps:after {
+    margin-top: 40px; }
+  .footer .our-apps .our-apps__list {
+    padding-right: 30.5%;
+    padding-left: 32.4%; }
+    .footer .our-apps .our-apps__list .list__item:first-child {
+      margin-right: 40px; }
+    .footer .our-apps .our-apps__list .list__item .app__icon {
+      display: block;
+      height: 40px; }
+      .footer .our-apps .our-apps__list .list__item .app__icon--apple {
+        width: 121px; }
+      .footer .our-apps .our-apps__list .list__item .app__icon--google {
+        width: 135px; }
+  .footer .copyright__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .footer .copyright__list .copyright__list-item:not(:last-child) {
+      margin-bottom: 0; }
+  .footer .back-to-top__link {
+    width: 80px;
+    height: 80px; }
+    .footer .back-to-top__link .icon-container {
+      padding-top: 25px; }
+    .footer .back-to-top__link:hover {
+      background-color: #49a144; } }
+
+@media (min-width: 640px) and (max-width: 730px) {
+  .header .delivery--header {
+    margin: 0; }
+    .header .delivery--header form .delivery-address {
+      width: 155px; } }
+
+@media (min-width: 1124px) {
+  .header {
+    padding: 16px 7.7% 16px 7.2%; }
+    .header .logo {
+      width: 119px;
+      height: 12px;
+      margin-right: 13%; }
+    .header .delivery--header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 10%; }
+      .header .delivery--header .delivery__order-btn {
+        width: 65px;
+        font-size: 16px; }
+      .header .delivery--header .delivery__to {
+        font-size: 16px; }
+      .header .delivery--header .delivery-address {
+        width: 292px; }
+    .header .register-controls__btn {
+      display: block;
+      width: 80px;
+      font-size: 13px; }
+      .header .register-controls__btn:first-child {
+        margin-right: 10%; }
+    .header .basket {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .main {
+    padding: 0 7.7% 0 7.2%; }
+    .main .search {
+      margin-bottom: 56px; }
+      .main .search::before {
+        width: 22px;
+        height: 22px;
+        top: 15px; }
+      .main .search__form-input {
+        font-size: 16px;
+        line-height: 1.5em; }
+    .main .search-result__title {
+      margin-bottom: 16px; }
+    .main .search-result__list {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-bottom: 60px; }
+      .main .search-result__list-item {
+        min-width: 308px; }
+      .main .search-result__list .list-item__food {
+        letter-spacing: -0.1px; }
+  .footer {
+    padding: 56px 7.7% 40px 7.2%; }
+    .footer__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-bottom: 25px; }
+      .footer__content .footer__lang::after {
+        left: 195px; }
+      .footer__content .language__select {
+        width: 227px; }
+    .footer .our-apps::before {
+      margin-bottom: 40px; }
+    .footer .our-apps:after {
+      margin-top: 40px; }
+    .footer .our-apps .our-apps__list {
+      padding-right: 33.5%;
+      padding-left: 35.5%; }
+      .footer .our-apps .our-apps__list .list__item:first-child {
+        margin-right: 40px; }
+      .footer .our-apps .our-apps__list .list__item .app__icon {
+        display: block;
+        height: 40px; }
+        .footer .our-apps .our-apps__list .list__item .app__icon--apple {
+          width: 121px; }
+        .footer .our-apps .our-apps__list .list__item .app__icon--google {
+          width: 135px; }
+    .footer .copyright__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; }
+      .footer .copyright__list .copyright__list-item:not(:last-child) {
+        margin-bottom: 0; }
+    .footer .back-to-top__link {
+      width: 80px;
+      height: 80px; }
+      .footer .back-to-top__link .icon-container {
+        padding-top: 25px; }
+      .footer .back-to-top__link:hover {
+        background-color: #49a144; } }
 
 /*# sourceMappingURL=main.css.map */

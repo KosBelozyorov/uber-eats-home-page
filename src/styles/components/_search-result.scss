@@ -1,0 +1,71 @@
+.search-result {
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      background-color: rgba(117, 117, 117, 0.04);
+      @media (max-width: 639px) {
+        &:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        box-shadow: inset 0 0 0 1px #d5d5d5, 0 0 6px 0 #d5d5d5;
+      }
+
+      .item__link {
+        text-decoration: none;
+      }
+
+      .img-container {
+        min-width: 308px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+      }
+
+      .list-item__image {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .list-item__desc {
+        padding-left: 10px;
+        padding-bottom: 20px;
+        .list-item__title {
+          margin-bottom: 4px;
+        }
+
+        .list-item__price-food {
+          .list-item__food {
+            @extend %no-margin;
+            color: $placeholder-color;
+            font-size: 14px;
+            line-height: 1.5em;
+            margin-bottom: 4px;
+          }
+        }
+
+        .list-item__time {
+          color: $main-text-color;
+          font-size: 13px;
+          line-height: 1.62em;
+        }
+      }
+    }
+  }
+}
