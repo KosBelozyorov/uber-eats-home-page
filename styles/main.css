@@ -137,7 +137,8 @@ body {
         left: 0;
         background-color: #fff;
         border: 1px solid #e0e0e0;
-        border-radius: 2px; }
+        border-radius: 2px;
+        text-align: left; }
       .header .delivery--header .delivery__order-btn .menu-drop__link {
         padding-left: 12px;
         text-decoration: none;
@@ -234,7 +235,8 @@ body {
     line-height: 24px;
     text-indent: 24px; }
     .search__form-input:focus {
-      outline-color: transparent; }
+      outline-color: transparent;
+      border-bottom-color: #49a144; }
     .search__form-input::-webkit-input-placeholder {
       color: #626262;
       opacity: 0.5; }
@@ -270,6 +272,7 @@ body {
     margin-right: 16px;
     font-size: 13px;
     line-height: 38px;
+    text-align: center;
     position: relative; }
   .delivery form {
     width: calc(100% - 81px);
